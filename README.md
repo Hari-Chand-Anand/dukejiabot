@@ -1,1 +1,1 @@
-# dukejiabot
+# dukejia-bot
