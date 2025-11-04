@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <style>
         /* ===== DUKEJIA Design Tokens (brand palette) ===== */
     :root{
@@ -1056,9 +1058,11 @@
     menuToggle.addEventListener('click', () => {
       navCenter.classList.toggle('open');
       if (navCenter.classList.contains('open')) {
-        menuIcon.classList.remove('fa-bars'); menuIcon.classList.add('fa-times');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark'); // FA6 close icon
       } else {
-        menuIcon.classList.remove('fa-times'); menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
       }
     });
 
@@ -1066,7 +1070,7 @@
     document.querySelectorAll('.nav-center a').forEach(link => {
       link.addEventListener('click', () => {
         navCenter.classList.remove('open');
-        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.remove('fa-xmark');
         menuIcon.classList.add('fa-bars');
       });
     });
